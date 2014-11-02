@@ -24,7 +24,7 @@ public class CityEntity implements Serializable {
 	@Id
 	@Column(name = "CITY_ID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int cityId;
+	private Integer cityId;
 
 	@NotEmpty
 	@Column(name = "CITY_NAME")

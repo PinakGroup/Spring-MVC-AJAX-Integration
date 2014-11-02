@@ -9,6 +9,6 @@ import com.spring.springajaxintegration.persistence.model.StateEntity;
 
 public interface StateRepository extends JpaRepository<StateEntity, Integer> {
 
-	@Query("SELECT s from STATE s ORDER BY s.stateName ASC")
+	@Query("SELECT s from StateEntity s ORDER BY s.stateName ASC")
 	public List<StateEntity> getAllStates();
 }

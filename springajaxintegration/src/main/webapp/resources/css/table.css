@@ -78,7 +78,7 @@
 	color: #ffffff;
 }
 
-.CSSTableGenerator tr:first-child:hover td {
+.springajax tr:first-child:hover td {
 	background: -o-linear-gradient(bottom, #0069d3 5%, #007fff 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0069d3
 		), color-stop(1, #007fff));

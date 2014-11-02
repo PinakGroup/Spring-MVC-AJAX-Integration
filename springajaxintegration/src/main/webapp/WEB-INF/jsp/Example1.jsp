@@ -14,40 +14,39 @@
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/table.css">
 </head>
 <body>
-<h2 style="text-align: justify;">Auto-loading of cities when state is selected from drop-down box using AJAX.</h2>
+<header style="text-align: center; font-size: 21px">Auto-loading of cities when state is selected from drop-down box.</header><br>
 
-<form action="" method="post">
 <div class="springajax" style="width:450px; height:150px;">
 	<table>
 		<tr>
-			<td>Fields</td>
-			<td>Details</td>
+			<td colspan="2">AJAX Demo</td>
 		</tr>
 		<tr>
 			<td>Select State</td>
 			<td>
-				<select>
+				<select name="state" id="state" onblur="getCitiesForSelectedState()">
 					<option value="Select State">Select State</option>
+					<c:forEach items="${stateList}" var="stateList">
+						<option value="${stateList.stateName}">${stateList.stateName}</option>
+					</c:forEach>
 				</select>
 			</td>
 		</tr>
 		<tr>
 			<td>Select City</td>
 			<td>
-				<select>
+				<select id="city" name="city">
 					<option value="Select City">Select City</option>
 				</select>
+				<div id="loading"></div>
 			</td>
 		</tr>
 	</table><br>
-	<div align="center">
-		<input type="reset">&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="submit">
-	</div>
 </div><br><br><br><br><br><br>
 <div align="center">
 	<a href="${pageContext.request.contextPath}/">Go Back to Main Menu</a>
 </div>
-</form>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/example1.js"></script>
 </body>
 </html>
