@@ -41,7 +41,7 @@
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" id="password" name="password" onblur="checkPasswordForEmpty()"
+					<td><input type="password" id="password" name="password" onblur="checkPasswordForEmpty();checkPasswordForWrongPattern()" onkeyup="checkPasswordForWrongPattern()"
 						title="(Must contain at least 1 Capital Letter, 1 digit, and 1 special symbol)">&nbsp;<font
 						color="red">*</font><br>
 						<div style="color: red" id="password_blank_result"></div>
@@ -50,7 +50,7 @@
 				</tr>
 				<tr>
 					<td>Repeat Password</td>
-					<td><input type="password" id="repeatPassword" onblur="checkRepeatPasswordForEmpty()"
+					<td><input type="password" id="repeatPassword" onblur="checkRepeatPasswordForEmpty(); checkRepeatPasswordForEqual()" onkeyup="checkRepeatPasswordForEqual()"
 						name="repeatPassword" title="(Must be exactly same as above)">&nbsp;<font
 						color="red">*</font><br>
 						<div style="color: red" id="repeat_password_blank_result"></div>
@@ -59,7 +59,7 @@
 				</tr>
 				<tr>
 					<td>Email ID</td>
-					<td><input type="email" id="emailId" name="emailId" onblur="checkEmailIdForEmpty()"
+					<td><input type="email" id="emailId" name="emailId" onblur="checkEmailIdForEmpty()" onkeyup="checkEmailIdForWrongPattern()"
 						placeholder="someone@somedomain.com">&nbsp;<font
 						color="red">*</font><br>
 						<div style="color: red" id="email_id_blank_result"></div>
@@ -68,10 +68,11 @@
 				</tr>
 				<tr>
 					<td>Mobile Number</td>
-					<td><input type="text" id="mobileNumber" name="mobileNumber" onblur="checkMobileNumberForEmpty()"
+					<td><input type="text" id="mobileNumber" name="mobileNumber" onblur="checkMobileNumberForEmpty()" onkeyup="checkMobileNumberForWrongPattern()"
 						title="(Must contain only 10 digits)" placeholder="0123456789">&nbsp;<font
 						color="red">*</font><br>
 						<div style="color: red" id="mobile_number_blank_result"></div>
+						<div style="color: red" id="mobile_number_pattern_result"></div>
 					</td>
 				</tr>
 				<tr>
@@ -103,7 +104,7 @@
 				</tr>
 				<tr>
 					<td>Postal Code</td>
-					<td><input type="text" id="postalCode" name="postalCode" onblur="checkPostalCodeForEmpty()"
+					<td><input type="text" id="postalCode" name="postalCode" onblur="checkPostalCodeForEmpty()" onkeyup="checkPostalCodeForWrongPattern()"
 						placeholder="123456" title="(Must contain only 6 digits)">&nbsp;<font
 						color="red">*</font><br>
 						<div style="color: red" id="postal_code_blank_result"></div>
@@ -366,6 +367,78 @@
 					$('#country_blank_result').html('Select country');
 				} else {
 					$('#country_blank_result').html('');
+				}
+			});
+		}
+		
+		function checkMobileNumberForWrongPattern() {
+			var mobileNumber = $('#mobileNumber').val();
+
+			$.post("./example3/validate/checkMobileNumberForWrongPattern", {
+				mobileNumber : mobileNumber
+			}, function(result) {
+				if (result == 'WRONG_PATTERN') {
+					$('#mobile_number_pattern_result').html('Enter correct mobile number');
+				} else {
+					$('#mobile_number_pattern_result').html('');
+				}
+			});
+		}
+		
+		function checkPostalCodeForWrongPattern() {
+			var postalCode = $('#postalCode').val();
+
+			$.post("./example3/validate/checkPostalCodeForWrongPattern", {
+				postalCode : postalCode
+			}, function(result) {
+				if (result == 'WRONG_PATTERN') {
+					$('#postal_code_pattern_result').html('Enter correct postal code');
+				} else {
+					$('#postal_code_pattern_result').html('');
+				}
+			});
+		}
+		
+		function checkEmailIdForWrongPattern() {
+			var emailId = $('#emailId').val();
+
+			$.post("./example3/validate/checkEmailIdForWrongPattern", {
+				emailId : emailId
+			}, function(result) {
+				if (result == 'WRONG_PATTERN') {
+					$('#email_id_pattern_result').html('Enter correct email id');
+				} else {
+					$('#email_id_pattern_result').html('');
+				}
+			});
+		}
+		
+		function checkPasswordForWrongPattern() {
+			var password = $('#password').val();
+
+			$.post("./example3/validate/checkPasswordForWrongPattern", {
+				password : password
+			}, function(result) {
+				if (result == 'WRONG_PATTERN') {
+					$('#password_pattern_result').html('Enter correct password');
+				} else {
+					$('#password_pattern_result').html('');
+				}
+			});
+		}
+		
+		function checkRepeatPasswordForEqual() {
+			var password = $('#password').val();
+			var repeatPassword = $('#repeatPassword').val();
+
+			$.post("./example3/validate/checkRepeatPasswordForEqual", {
+				password : password,
+				repeatPassword : repeatPassword
+			}, function(result) {
+				if (result == 'NOT_SAME') {
+					$('#repeat_password_match_result').html('Password must match with one you entered previously');
+				} else {
+					$('#repeat_password_match_result').html('');
 				}
 			});
 		}
