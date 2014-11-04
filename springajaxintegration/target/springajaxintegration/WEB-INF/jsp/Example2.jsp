@@ -14,44 +14,78 @@
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/table.css">
 </head>
 <body>
-<h2 style="text-align: justify;">Auto-loading of cities when state is selected from drop-down box.</h2>
+<header style="text-align: center; font-size: 21px">Auto-loading of country details when country is selected from drop-down box.</header><br>
 <br><br>
-				<select name="state" id="state"onblur="getCitiesForSelectedState()">
-					<option value="Select State">Select State</option>
-					<c:forEach items="${stateList}" var="stateList">
-						<option value="${stateList.stateName}">${stateList.stateName}</option>
+		<form id="countryDetailsForm">
+				<select name="country" id="country" required="required">
+					<option value="Select Country">Select Country</option>
+					<c:forEach items="${countryList}" var="countryList">
+						<option value="${countryList.countryName}">${countryList.countryName}</option>
 					</c:forEach>
 				</select>
-<div class="springajax" style="width:450px; height:150px;">
+				<input type="submit" value="Get Details">
+		</form>		
+		<div id="loading"></div>
+<br><br>
+<div class="springajax" style="width:650px; height:400px;">
 	<table>
 		<tr>
-			<td>Fields</td>
-			<td>Details</td>
+			<td colspan="2">Details of Selected Country</td>
 		</tr>
 		<tr>
-			<td>Select State</td>
+			<td>Code</td>
 			<td>
-				
+				<div id="countryCode"></div>
 			</td>
 		</tr>
 		<tr>
-			<td>Select City</td>
+			<td>Name</td>
 			<td>
-				<select id="city" name="city">
-					<option value="Select City">Select City</option>
-				</select>
-				<div id="loading"></div>
+				<div id="countryName"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>Long Name</td>
+			<td>
+				<div id="longName"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>ISO3</td>
+			<td>
+				<div id="iso3"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>Num Code</td>
+			<td>
+				<div id="numCode"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>UN Number</td>
+			<td>
+				<div id="unNumber"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>Calling Code</td>
+			<td>
+				<div id="callingCode"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>CCTLD</td>
+			<td>
+				<div id="cctld"></div>
 			</td>
 		</tr>
 	</table><br>
-	<div align="center">
-		<input type="reset">&nbsp;&nbsp;&nbsp;&nbsp;
-	</div>
-</div><br><br><br><br><br><br>
+</div><br><br>
 <div align="center">
 	<a href="${pageContext.request.contextPath}/">Go Back to Main Menu</a>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/js/example1.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/example2.js"></script>
 </body>
 </html>
