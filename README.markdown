@@ -39,4 +39,31 @@ And browse to [http://localhost:8080/springajaxintegration/](http://localhost:80
 Source is hosted at the [Spring-MVC-AJAX-Integration GitHub repository](https://github.com/shivam091/Spring-MVC-AJAX-Integration.git). 
 Downloads are also available on the [GitHub project's Downloads section] (https://github.com/shivam091/Spring-MVC-AJAX-Integration/downloads)
 
-
+##Dependencies
+######javax.servlet-api:3.0.4
+######servlet-api:2.5
+######jsp-api:2.1
+######jstl:1.2
+######cglib-nodep:2.2
+######commons-dbcp:1.4
+######javassist:3.12.1.GA
+######jackson-mapper-asl:1.9.9
+######jackson-core-asl:1.9.9
+######jackson-databind:2.3.2
+######jackson-annotations:2.3.0
+######spring-context:4.0.1.RELEASE
+######spring-core:4.0.1.RELEASE
+######spring-web:4.0.1.RELEASE
+######spring-webmvc:4.0.1.RELEASE
+######spring-orm:4.0.1.RELEASE
+######spring-tx:4.0.1.RELEASE
+######spring-jdbc:4.0.1.RELEASE
+######spring-test:4.0.1.RELEASE
+######spring-data-jpa:1.4.1.RELEASE
+######hibernate-entitymanager:4.3.5.Final
+######hibernate-core:3.6.5.Final
+######hibernate-validator:4.1.0.Final
+######mysql-connector-java:5.1.22
+######dom4j:1.5
+######commons-io2.4
+######commons-fileupload:1.3
