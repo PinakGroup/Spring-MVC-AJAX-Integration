@@ -18,6 +18,6 @@
 	</div>
 		<a href="${pageContext.request.contextPath}/example1">Example 1 (Auto-loading of cities when state is selected from drop-down box using AJAX)</a><br><br>
 		<a href="${pageContext.request.contextPath}/example2">Example 2 (Auto-loading of country details when country is selected from drop-down box using AJAX)</a><br><br>
-		<a href="${pageContext.request.contextPath}/example3">Example 3 (Validations in Spring MVC using AJAX)</a>		
+		<a href="${pageContext.request.contextPath}/example3">Example 3 (Validations in Spring MVC and submitting form using AJAX)</a>		
 </body>
 </html>

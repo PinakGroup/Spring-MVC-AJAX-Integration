@@ -15,8 +15,7 @@
 	href="${pageContext.request.contextPath}/resources/css/table.css">
 </head>
 <body>
-	<header style="text-align: center; font-size: 21px">Validations
-		in Spring MVC using AJAX</header>
+	<header style="text-align: center; font-size: 21px">Validations in Spring MVC and submitting form using AJAX</header>
 	<br>
 
 	<form id="validationForm">
