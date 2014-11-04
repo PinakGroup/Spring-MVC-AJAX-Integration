@@ -9,46 +9,6 @@
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
     		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" p:order="1"/>
     
-    <!-- Start Restful Response Config -->
-	<!-- <bean
-		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-		<property name="order" value="0" />
-		<property name="mediaTypes">
-			<map>
-				<entry key="json" value="application/json" />
-				<entry key="xml" value="application/xml" />
-			</map>
-		</property>
-
-		<property name="defaultViews">
-			<list>
-				JSON View
-				<bean
-					class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
-				</bean>
-
-				JAXB XML View
-				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
-					<constructor-arg>
-						<bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
-							<property name="packagesToScan">
-								<list>
-									<value>com.aspeage.quikwin.response.model</value>
-									<value>com.aspeage.quikwin.web.service.model.request</value>
-									<value>com.aspeage.quikwin.web.service.model.response</value>
-								</list>
-							</property>
-						</bean>
-					</constructor-arg>
-				</bean>
-			</list>
-		</property>
-		<property name="ignoreAcceptHeader" value="true" />
-
-	</bean> -->
-	<!-- End Restful Response Config -->
-	
-	
 	<!-- Multipart Resolver -->
 	<bean id="multipartResolver"
         class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
