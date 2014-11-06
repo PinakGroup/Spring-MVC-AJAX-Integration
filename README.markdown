@@ -37,7 +37,7 @@ And browse to [http://localhost:8080/springajaxintegration/](http://localhost:80
 
 ##Downloads
 Source is hosted at the [Spring-MVC-AJAX-Integration GitHub repository](https://github.com/shivam091/Spring-MVC-AJAX-Integration.git). 
-Downloads are also available on the [GitHub project's Downloads section] (https://github.com/shivam091/Spring-MVC-AJAX-Integration/downloads)
+Downloads are also available on the [GitHub project's Downloads section] (https://github.com/shivam091/Spring-MVC-AJAX-Integration/archive/master.zip)
 
 ##Dependencies
 ######javax.servlet-api:3.0.4
