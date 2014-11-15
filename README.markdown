@@ -19,21 +19,21 @@ This repository contains three examples of Spring MVC with AJAX Integration. Exa
 And browse to [http://localhost:8080/springajaxintegration/](http://localhost:8080/springajaxintegration/).![Build Status](http://i1272.photobucket.com/albums/y389/harshal091/passing_zpsb61e9184.png?t=1408901662)
 
 ####Main Form####
-![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Github/MainForm_zps40dbdd16.png)
+![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/MainForm_zps40dbdd16.png)
 
 ####Example 1 (Auto-loading of cities when state is selected from drop-down box using AJAX)####
-![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Github/Example1_zps6d2cc866.png)
+![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Example1_zps6d2cc866.png)
 
 ####Example 2 (Auto-loading of country details when country is selected from drop-down box using AJAX)####
-![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Github/Example2_zpsc59d0359.png)
+![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Example2_zpsc59d0359.png)
 
 #### Example3 (Validations in Spring MVC and submitting form using AJAX)####
 
-![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Github/Example3FailedValidations_zpsb0e5fe01.png)
+![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Example3FailedValidations_zpsb0e5fe01.png)
 
-![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Github/Example3PassedValidations_zpsf1a689ef.png)
+![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Example3PassedValidations_zpsf1a689ef.png)
 
-![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Github/Example3AJAXsubmit_zpsc055989a.png)
+![Screenshot](http://i1272.photobucket.com/albums/y389/harshal091/Example3AJAXsubmit_zpsc055989a.png)
 
 ##Downloads
 Source is hosted at the [Spring-MVC-AJAX-Integration GitHub repository](https://github.com/shivam091/Spring-MVC-AJAX-Integration.git). 
