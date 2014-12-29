@@ -67,3 +67,42 @@ Downloads are also available on the [GitHub project's Downloads section] (https:
 ######dom4j:1.5
 ######commons-io2.4
 ######commons-fileupload:1.3
+
+1. Write AR Query to display names of all the courses and it's cost in descending order.
+Query:
+
+2. Write AR Query to display all Prof. Meheta's students from Engineering Department.
+Query:
+
+3. Write AR Query to display the count of all the students of every course where course name is listed in ascending order
+Query:
+
+4. Write AR Query to count the number of students from Engineering Department whose course fees are remaining .
+Query:
+
+5. Write AR Query to display all the details of all the professors of medical department.
+Query:
+
+6. Write AR Query to display full name of all the students who have taken Computers course.
+Query:
+
+7. Write AR Query to display all the 'A grade' students from  III rd semester of engineering.
+Query:
+
+8. Write AR Query to display all name of all the courses and start time of every section along with the full name of the professor.
+Query:
+
+9. Write AR Query to display details of all the employees and their department name in descending order of their department name.
+Query:
+
+10. Write AR Query to display the all students from first year of Engineering.
+Query:
+
+11. Write AR Query to display names of all the departments and cost of all it's courses. 
+Query:
+
+12. Write AR Query to count fees paid by all the students for every course during year 2012
+Query:
+
+13. Write AR Query to count fees collected for every course during all the years and list the details in ascending order of year
+Query:
